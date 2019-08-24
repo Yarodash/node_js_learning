@@ -39,7 +39,7 @@ const Server = new WebSocket.Server({port: 8080});
 Server.on('connection', ws => {
     ws.on('message', message => {
         //console.log(message);
-        Server.clients.forEacWh(client => {
+        Server.clients.forEach(client => {
         if (client != ws)
             client.send(message); })
         })
